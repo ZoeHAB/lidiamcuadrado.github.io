@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: #ffc7d3;
@@ -7,12 +11,18 @@ body {
   justify-content: center;
   align-items: center;
   color: #808080;
+
+  margin: 0;
+
+  /* Sin esto no se centra en altura: */
+  min-height: 100vh;
 }
 
 .message {
   background-color: white;
   border-radius: 10px;
   width: 25vw;
+  min-width: 20rem;
   text-align: center;
   padding: 1.5em;
   /* flex-direction: row; */
@@ -44,15 +54,16 @@ body {
 }
 
 form {
-  display: grid;
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 .comment {
   border-radius: 25px;
   text-align: center;
   padding: 1em;
-  font-size: 1em;
+  /* font-size: 1em; */
+
+  width: 100%;
 }
 
 label .email-text {
